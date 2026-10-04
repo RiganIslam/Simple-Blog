@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #0f1117;
+  color: #f8fafc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: #ff6b5a;
+  color: white;
+}
+
+.glow-coral {
+  animation: floatOne 8s ease-in-out infinite;
+}
+
+.glow-purple {
+  animation: floatTwo 10s ease-in-out infinite;
+}
+
+@keyframes floatOne {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(40px, 30px);
+  }
+}
+
+@keyframes floatTwo {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-30px, -40px);
+  }
+}
+
+.card-hover {
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 107, 90, 0.4);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
